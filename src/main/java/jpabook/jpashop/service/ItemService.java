@@ -10,13 +10,13 @@ import jpabook.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
-@Transactional
+@Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class ItemService {
 
 	private final ItemRepository itemRepository;
 
-	@Transactional
+	@Transactional(readOnly = false)
 	public void saveItem(Item item) {
 		itemRepository.save(item);
 	}

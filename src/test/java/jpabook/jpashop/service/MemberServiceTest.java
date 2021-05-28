@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -64,7 +63,7 @@ public class MemberServiceTest {
 		member2.setName("kim");
 		// when
 		memberService.join(member1);
-		memberService.join(member2); // expected에 정의 된 exception은 try catch를 해주지않아도된다.
+		memberService.join(member2); // expected 에 정의 된 exception 은 try catch 를 해주지않아도된다.
 
 		// then
 		fail("예외가 발생해야 한다.");
