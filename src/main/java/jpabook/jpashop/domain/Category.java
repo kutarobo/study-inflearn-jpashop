@@ -39,7 +39,7 @@ public class Category {
 	@JoinTable(name = "category_item",
 		joinColumns = @JoinColumn(name = "catagory_id"),
 		inverseJoinColumns = @JoinColumn(name = "item_id"))
-	private List<Item> categories = new ArrayList<>();
+	private List<Item> items = new ArrayList<>();
 
 	@ManyToOne(fetch = LAZY)
 	@JoinColumn(name = "parent_id")
